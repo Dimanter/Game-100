@@ -27,6 +27,7 @@ int menu()
 		cout << "of 15 Latin alphabet characters from A to z. There should be no gaps when entering a nickname." << endl;
 		cout << "To continue press any key ..." << endl;
 		getchar();
+		getchar();
 		return 1;
 	}
 	case 3:

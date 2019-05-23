@@ -114,8 +114,12 @@ int main()
 	srand(time(NULL));
 	char p1[15],p2[15];
 	int Spich=100,n1=0,n2=0,k1=0,k2=0,flag=0,t1=0,t2=0,h1,h2,x=1;
-	cout << "Enter player name 1" << endl;
-	cin >> p1;
+	while(x)
+	{
+		system("clear");
+		cout << "Enter player name 1" << endl;
+		cin >> p1;
+	}
 	cout << "Enter player name 2" << endl;
 	cin >> p2;
 	h1=rand()%100;h2=rand()%100;

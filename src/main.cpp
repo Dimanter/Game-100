@@ -119,9 +119,15 @@ int main()
 		system("clear");
 		cout << "Enter player name 1" << endl;
 		cin >> p1;
+		x=ProverNik(p1);
 	}
-	cout << "Enter player name 2" << endl;
-	cin >> p2;
+	while(x)
+	{
+		system("clear");
+		cout << "Enter player name 2" << endl;
+		cin >> p2;
+		x=ProverNik(p2);
+	}
 	h1=rand()%100;h2=rand()%100;
 	if(h1>h2)
 	{

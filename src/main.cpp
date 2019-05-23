@@ -4,36 +4,67 @@
 #include <clocale>
 using namespace std;
 
+int menu()
+{
+	int r;
+	system("clear");
+	cout << "Start game" << endl;
+	cout << "Rules" << endl;
+	cout << "Exit" << endl;
+	cin >> r;
+	switch (r)
+	{
+	case 1:
+	{
+		return 0;
+	}
+	case 2:
+	{
+		system("clear");
+		cout << "From the heap, initially containing 100 matches, two playing in turn take several matches: at least one and " << endl;
+		cout << "not more than ten. Wins the one who took the last match. ";
+		cout << "A player's nickname consists of at least 1 maximum" << endl;
+		cout << "of 15 Latin alphabet characters from A to z. There should be no gaps when entering a nickname." << endl;
+		cout << "To continue press any key ..." << endl;
+		getchar();
+		return 1;
+	}
+	case 3:
+	{
+		system("clear");
+		cout << "Good bay :) " << endl;
+		return 2;
+	}
+	}
+	return 0;
+}
+
 int ProverNik(char p[15])
 {
-	int i=0,t=0;
-	while(i<15)
+	int i = 0, t = 0;
+	while (i < 15)
 	{
-		if(p[i]==0)
+		if (p[i] == 0)
 		{
 			break;
 		}
-		if(p[i]=='a' || p[i]=='b' || p[i]=='c' || p[i]=='d' || p[i]=='e' || p[i]=='f' || p[i]=='g' || p[i]=='h' || p[i]=='j' || p[i]=='k' || p[i]=='l' || p[i]=='m' || p[i]=='n' || p[i]=='o')
+		if (p[i] == 'a' || p[i] == 'b' || p[i] == 'c' || p[i] == 'd' || p[i] == 'e' || p[i] == 'f' || p[i] == 'g' || p[i] == 'h' || p[i] == 'j' || p[i] == 'k' || p[i] == 'l' || p[i] == 'm' || p[i] == 'n' || p[i] == 'o')
 		{
-			
 		}
 		else
 		{
-			if(p[i]=='p' || p[i]=='r' || p[i]=='s' || p[i]=='t' || p[i]=='u' || p[i]=='v' || p[i]=='w' || p[i]=='u' || p[i]=='y' || p[i]=='z' || p[i]=='x' || p[i]=='q')
+			if (p[i] == 'p' || p[i] == 'r' || p[i] == 's' || p[i] == 't' || p[i] == 'u' || p[i] == 'v' || p[i] == 'w' || p[i] == 'u' || p[i] == 'y' || p[i] == 'z' || p[i] == 'x' || p[i] == 'q')
 			{
-				
 			}
 			else
 			{
-				if(p[i]=='A' || p[i]=='B' || p[i]=='C' || p[i]=='D' || p[i]=='E' || p[i]=='F' || p[i]=='G' || p[i]=='H' || p[i]=='J' || p[i]=='K' || p[i]=='L' || p[i]=='M' || p[i]=='N' || p[i]=='O')
+				if (p[i] == 'A' || p[i] == 'B' || p[i] == 'C' || p[i] == 'D' || p[i] == 'E' || p[i] == 'F' || p[i] == 'G' || p[i] == 'H' || p[i] == 'J' || p[i] == 'K' || p[i] == 'L' || p[i] == 'M' || p[i] == 'N' || p[i] == 'O')
 				{
-					
 				}
 				else
 				{
-					if(p[i]=='P' || p[i]=='R' || p[i]=='S' || p[i]=='T' || p[i]=='U' || p[i]=='V' || p[i]=='W' || p[i]=='U' || p[i]=='Y' || p[i]=='Z' || p[i]=='X' || p[i]=='Q')
+					if (p[i] == 'P' || p[i] == 'R' || p[i] == 'S' || p[i] == 'T' || p[i] == 'U' || p[i] == 'V' || p[i] == 'W' || p[i] == 'U' || p[i] == 'Y' || p[i] == 'Z' || p[i] == 'X' || p[i] == 'Q')
 					{
-						
 					}
 					else
 					{
@@ -44,7 +75,7 @@ int ProverNik(char p[15])
 		}
 		i++;
 	}
-	if(t==0)
+	if (t == 0)
 	{
 		return 0;
 	}
@@ -54,24 +85,24 @@ int ProverNik(char p[15])
 	}
 }
 
-void Data(char p[15],int k,int n,int Spich)
+void Data(char p[15], int k, int n, int Spich)
 {
-	cout << "Move - " << p <<endl;
+	cout << "Move - " << p << endl;
 	cout << "The number of matches taken last time - " << k << endl;
 	cout << "The number of all matches taken - " << n << endl;
 	cout << "The number of matches remaining on the table - " << Spich << endl;
 }
-void Stat(char p[15],int k,int n)
+void Stat(char p[15], int k, int n)
 {
 	cout << "The number of matches taken last time - " << k << endl;
 	cout << "The number of all matches taken - " << n << endl;
 }
 
-int Prover(int k,int Spich)
+int Prover(int k, int Spich)
 {
-	if(k<11 && k > 0)
+	if (k < 11 && k > 0)
 	{
-		if(k>Spich)
+		if (k > Spich)
 		{
 			return 1;
 		}
@@ -85,93 +116,108 @@ int Prover(int k,int Spich)
 		return 1;
 	}
 }
-int Player1(int k1,int &n1,int Spich,char p[15])
+int Player1(int k1, int &n1, int Spich, char p[15])
 {
-	n1+=k1;
-	if(Spich-k1==0)
+	n1 += k1;
+	if (Spich - k1 == 0)
 	{
 		system("clear");
 		cout << "Win - " << p << " !!! " << endl;
 	}
-	Spich-=k1;
+	Spich -= k1;
 	return Spich;
 }
-int Player2(int k2,int &n2,int Spich,char p[15])
+int Player2(int k2, int &n2, int Spich, char p[15])
 {
-	n2+=k2;
-	if(Spich-k2==0)
+	n2 += k2;
+	if (Spich - k2 == 0)
 	{
 		system("clear");
 		cout << "Win - " << p << " !!! " << endl;
 	}
-	Spich-=k2;
+	Spich -= k2;
 	return Spich;
 }
 
 int main()
 {
-	setlocale(LC_ALL,"Russian");
+	setlocale(LC_ALL, "Russian");
 	srand(time(NULL));
-	char p1[15],p2[15];
-	int Spich=100,n1=0,n2=0,k1=0,k2=0,flag=0,t1=0,t2=0,h1,h2,x=1;
-	while(x)
+	char p1[15], p2[15];
+	int Spich = 100, n1 = 0, n2 = 0, k1 = 0, k2 = 0, flag = 0, t1 = 0, t2 = 0, h1, h2, x = 1;
+	while (x)
+	{
+		x = menu();
+		if (x == 2)
+		{
+			return 0;
+		}
+	}
+	x = 1;
+	while (x)
 	{
 		system("clear");
 		cout << "Enter player name 1" << endl;
 		cin >> p1;
-		x=ProverNik(p1);
+		x = ProverNik(p1);
 	}
-	while(x)
+	x = 1;
+	while (x)
 	{
 		system("clear");
 		cout << "Enter player name 2" << endl;
 		cin >> p2;
-		x=ProverNik(p2);
+		x = ProverNik(p2);
 	}
-	h1=rand()%100;h2=rand()%100;
-	if(h1>h2)
+	h1 = rand() % 100;
+	h2 = rand() % 100;
+	if (h1 > h2)
 	{
-		flag=0;
+		flag = 0;
 	}
 	else
 	{
-		flag=1;
+		flag = 1;
 	}
-	while(Spich > 0)
+	while (Spich > 0)
 	{
-		if(flag%2==0)
+		if (flag % 2 == 0)
 		{
-			x=1;
-			while(x)
+			x = 1;
+			while (x)
 			{
 				system("clear");
-				Data(p1,t1,n1,Spich);
-				cout << endl <<"Enter the number of matches you want to take " << endl;
+				Data(p1, t1, n1, Spich);
+				cout << endl
+					 << "Enter the number of matches you want to take " << endl;
 				cin >> k1;
-				x=Prover(k1,Spich);
+				x = Prover(k1, Spich);
 			}
-			t1=k1;
-			Spich=Player1(k1,n1,Spich,p1);
+			t1 = k1;
+			Spich = Player1(k1, n1, Spich, p1);
 			flag++;
 		}
 		else
 		{
-			x=1;
-			while(x)
+			x = 1;
+			while (x)
 			{
 				system("clear");
-				Data(p2,t2,n2,Spich);
-				cout<< endl <<"Enter the number of matches you want to take " << endl;
+				Data(p2, t2, n2, Spich);
+				cout << endl
+					 << "Enter the number of matches you want to take " << endl;
 				cin >> k2;
-				x=Prover(k2,Spich);
+				x = Prover(k2, Spich);
 			}
-			t2=k2;
-			Spich=Player2(k2,n2,Spich,p2);
+			t2 = k2;
+			Spich = Player2(k2, n2, Spich, p2);
 			flag--;
 		}
 	}
-	cout << endl << "Statistics for - " << p1 << endl;
-	Stat(p1,k1,n1);
-	cout << endl << "Statistics for - " << p2 << endl;
-	Stat(p2,k2,n2);
+	cout << endl
+		 << "Statistics for - " << p1 << endl;
+	Stat(p1, k1, n1);
+	cout << endl
+		 << "Statistics for - " << p2 << endl;
+	Stat(p2, k2, n2);
 }

@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <iostream>
 #include <ctime>
-#include <clocale>
 using namespace std;
 
 int menu()

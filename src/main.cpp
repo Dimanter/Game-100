@@ -53,7 +53,7 @@ int ProverNik(char p[15])
 		}
 		else
 		{
-			if (p[i] == 'p' || p[i] == 'r' || p[i] == 's' || p[i] == 't' || p[i] == 'u' || p[i] == 'v' || p[i] == 'w' || p[i] == 'u' || p[i] == 'y' || p[i] == 'z' || p[i] == 'x' || p[i] == 'q')
+			if (p[i] == 'p' || p[i] == 'r' || p[i] == 's' || p[i] == 't' || p[i] == 'u' || p[i] == 'v' || p[i] == 'w' || p[i] == 'u' || p[i] == 'y' || p[i] == 'z' || p[i] == 'x' || p[i] == 'q' || p[i] == 'i')
 			{
 			}
 			else
@@ -63,7 +63,7 @@ int ProverNik(char p[15])
 				}
 				else
 				{
-					if (p[i] == 'P' || p[i] == 'R' || p[i] == 'S' || p[i] == 'T' || p[i] == 'U' || p[i] == 'V' || p[i] == 'W' || p[i] == 'U' || p[i] == 'Y' || p[i] == 'Z' || p[i] == 'X' || p[i] == 'Q')
+					if (p[i] == 'I' || p[i] == 'P' || p[i] == 'R' || p[i] == 'S' || p[i] == 'T' || p[i] == 'U' || p[i] == 'V' || p[i] == 'W' || p[i] == 'U' || p[i] == 'Y' || p[i] == 'Z' || p[i] == 'X' || p[i] == 'Q')
 					{
 					}
 					else

@@ -2,10 +2,10 @@
 
 int main()
 {
-    srand(time(NULL));
+    // srand(time(NULL));
     char p1[15], p2[15];
     int Spich = 100, n1 = 0, n2 = 0, k1 = 0, k2 = 0, flag = 0, t1 = 0, t2 = 0,
-        h1, h2, x = 1;
+        h1 = 21, h2 == 22, x = 1;
     while (x) {
         x = menu();
         if (x == 2) {
@@ -26,8 +26,8 @@ int main()
         cin >> p2;
         x = ProverNik(p2);
     }
-    h1 = rand() % 100;
-    h2 = rand() % 100;
+    // h1 = rand() % 100;
+    // h2 = rand() % 100;
     if (h1 > h2) {
         flag = 0;
     } else {

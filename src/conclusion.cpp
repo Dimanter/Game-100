@@ -44,6 +44,8 @@ int menu()
     case 3: {
         system("clear");
         cout << "Good bay :) " << endl;
+        getchar();
+        getchar();
         return 2;
     }
     }

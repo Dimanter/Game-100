@@ -1,10 +1,7 @@
 #include "main.h"
 
-
-
 int main()
 {
-    setlocale(LC_ALL, "Russian");
     srand(time(NULL));
     char p1[15], p2[15];
     int Spich = 100, n1 = 0, n2 = 0, k1 = 0, k2 = 0, flag = 0, t1 = 0, t2 = 0,

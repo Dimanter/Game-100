@@ -14,14 +14,14 @@ int main()
     }
     x = 1;
     while (x) {
-        system("clear");
+        // system("clear");
         cout << "Enter player name 1" << endl;
         cin >> p1;
         x = ProverNik(p1);
     }
     x = 1;
     while (x) {
-        system("clear");
+        // system("clear");
         cout << "Enter player name 2" << endl;
         cin >> p2;
         x = ProverNik(p2);
@@ -37,7 +37,7 @@ int main()
         if (flag % 2 == 0) {
             x = 1;
             while (x) {
-                system("clear");
+                // system("clear");
                 Data(p1, t1, n1, Spich);
                 cout << endl
                      << "Enter the number of matches you want to take " << endl;
@@ -50,7 +50,7 @@ int main()
         } else {
             x = 1;
             while (x) {
-                system("clear");
+                // system("clear");
                 Data(p2, t2, n2, Spich);
                 cout << endl
                      << "Enter the number of matches you want to take " << endl;

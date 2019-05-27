@@ -4,7 +4,7 @@ OBJ = g++ $(CFLAGS) -c $< -o $@
 
 .PHONY: clean
 
-all:folder Game.exe
+all:folder Game.exe tests
 
 folder:
 	mkdir -p build 
@@ -22,8 +22,18 @@ build/check.o : src/check.cpp src/main.h
 build/conclusion.o : src/conclusion.cpp src/main.h 
 	$(OBJ)
 
+tests: build/test.o  build/first_test.o 
+	gcc -Wall build/test.o build/first_test.o -o tests
+
+build/test.o: test/test.c
+	gcc -Wall -c test/test.c -o build/test.o -Itest
+
+build/first_test.o: test/first_test.c
+	gcc -Wall -c test/first_test.c -o build/first_test.o -Itest
+
 
 clean:
 	rm build/*.o
 	rm *.exe
 	rm -R build
+	rm tests

@@ -11,5 +11,4 @@ int ProverNik(char p[15]);
 void Data(char p[15], int k, int n, int Spich);
 void Stat(char p[15], int k, int n);
 int menu();
-
 #endif

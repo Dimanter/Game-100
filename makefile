@@ -1,5 +1,5 @@
 CFLAGS = -Wall -Werror
-
+TEST = g++ -std=c++11 $(GFAGS) -Ithirtdparty/catch2 -c $< -o $@
 OBJ = g++ $(CFLAGS) -c $< -o $@
 
 .PHONY: clean
@@ -22,15 +22,11 @@ build/check.o : src/check.cpp src/main.h
 build/conclusion.o : src/conclusion.cpp src/main.h 
 	$(OBJ)
 
-tests: build/test.o  build/first_test.o 
-	gcc -Wall build/test.o build/first_test.o -o tests
+tests: build/test.o build/check.o
+	g++ $(CFLAGS) -Ithirdparty/catch2 $^ -o $@
 
-build/test.o: test/test.c
-	gcc -Wall -c test/test.c -o build/test.o -Itest
-
-build/first_test.o: test/first_test.c
-	gcc -Wall -c test/first_test.c -o build/first_test.o -Itest
-
+build/test.o: test/test.cpp src/check.cpp
+	$(TEST)
 
 clean:
 	rm build/*.o

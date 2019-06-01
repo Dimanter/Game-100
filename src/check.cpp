@@ -58,7 +58,6 @@ int Player1(int k1, int& n1, int Spich, char p[15])
 {
     n1 += k1;
     if (Spich - k1 == 0) {
-        system("clear");
         cout << "Win - " << p << " !!! " << endl;
     }
     Spich -= k1;
@@ -69,7 +68,6 @@ int Player2(int k2, int& n2, int Spich, char p[15])
 {
     n2 += k2;
     if (Spich - k2 == 0) {
-        system("clear");
         cout << "Win - " << p << " !!! " << endl;
     }
     Spich -= k2;

@@ -17,7 +17,7 @@ void Stat(char p[15], int k, int n)
 int menu()
 {
     int r;
-    system("clear");
+    
     cout << "\tStart game" << endl << endl;
     cout << "\tRules" << endl << endl;
     cout << "\tExit" << endl << endl;
@@ -27,7 +27,7 @@ int menu()
         return 0;
     }
     case 2: {
-        system("clear");
+        
         cout << "From the heap, initially containing 100 matches, two playing "
                 "in turn take several matches: at least one and "
              << endl;
@@ -37,12 +37,9 @@ int menu()
                 "no gaps when entering a nickname."
              << endl;
         cout << "To continue press any key ..." << endl;
-        getchar();
-        getchar();
         return 1;
     }
     case 3: {
-        system("clear");
         cout << "Good bay :) " << endl;
         getchar();
         getchar();

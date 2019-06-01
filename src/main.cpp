@@ -2,7 +2,7 @@
 
 int main()
 {
-    // srand(time(NULL));
+    srand(time(NULL));
     char p1[15], p2[15];
     int Spich = 100, n1 = 0, n2 = 0, k1 = 0, k2 = 0, flag = 0, t1 = 0, t2 = 0,
         h1 = 21, h2 = 22, x = 1;
@@ -14,20 +14,20 @@ int main()
     }
     x = 1;
     while (x) {
-        // system("clear");
+        system("clear");
         cout << "Enter player name 1" << endl;
         cin >> p1;
         x = ProverNik(p1);
     }
     x = 1;
     while (x) {
-        // system("clear");
+        system("clear");
         cout << "Enter player name 2" << endl;
         cin >> p2;
         x = ProverNik(p2);
     }
-    // h1 = rand() % 100;
-    // h2 = rand() % 100;
+    h1 = rand() % 100;
+    h2 = rand() % 100;
     if (h1 > h2) {
         flag = 0;
     } else {
@@ -37,7 +37,7 @@ int main()
         if (flag % 2 == 0) {
             x = 1;
             while (x) {
-                // system("clear");
+                system("clear");
                 Data(p1, t1, n1, Spich);
                 cout << endl
                      << "Enter the number of matches you want to take " << endl;
@@ -50,7 +50,7 @@ int main()
         } else {
             x = 1;
             while (x) {
-                // system("clear");
+                system("clear");
                 Data(p2, t2, n2, Spich);
                 cout << endl
                      << "Enter the number of matches you want to take " << endl;

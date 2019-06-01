@@ -1,5 +1,22 @@
 #include "main.h"
 
+int Vvod()
+{
+	while (true)
+    {
+        int a;
+        cin >> a;
+        if (cin.fail())
+        {
+            cin.clear();
+            cin.ignore(32767,'\n');
+        }
+        else
+            return a;
+    }
+}
+
+
 int main()
 {
     char p1[15], p2[15];
@@ -37,7 +54,7 @@ int main()
                 Data(p1, t1, n1, Spich);
                 cout << endl
                      << "Enter the number of matches you want to take " << endl;
-                cin >> k1;
+                k1=Vvod();
                 x = Prover(k1, Spich);
             }
             t1 = k1;

@@ -2,20 +2,16 @@
 
 int Vvod()
 {
-	while (true)
-    {
+    while (true) {
         int a;
         cin >> a;
-        if (cin.fail())
-        {
+        if (cin.fail()) {
             cin.clear();
-            cin.ignore(32767,'\n');
-        }
-        else
+            cin.ignore(32767, '\n');
+        } else
             return a;
     }
 }
-
 
 int main()
 {
@@ -54,7 +50,7 @@ int main()
                 Data(p1, t1, n1, Spich);
                 cout << endl
                      << "Enter the number of matches you want to take " << endl;
-                k1=Vvod();
+                k1 = Vvod();
                 x = Prover(k1, Spich);
             }
             t1 = k1;

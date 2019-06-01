@@ -17,7 +17,7 @@ void Stat(char p[15], int k, int n)
 int menu()
 {
     int r;
-    
+
     cout << "\tStart game" << endl << endl;
     cout << "\tRules" << endl << endl;
     cout << "\tExit" << endl << endl;
@@ -27,7 +27,6 @@ int menu()
         return 0;
     }
     case 2: {
-        
         cout << "From the heap, initially containing 100 matches, two playing "
                 "in turn take several matches: at least one and "
              << endl;
